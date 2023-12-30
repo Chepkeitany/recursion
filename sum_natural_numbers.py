@@ -10,3 +10,4 @@ def sum_numbers(n):
 print(sum_numbers(5))
 print(sum_numbers(3))
 print(sum_numbers(1))
+print(sum_numbers(0))
