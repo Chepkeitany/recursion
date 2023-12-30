@@ -1,7 +1,7 @@
 def factorial(n):
     if n < 0:
         raise ValueError("Factorial can only be computed for non-negative numbers!")
-    if n <= 1:
+    elif n <= 1:
         return 1
     else:
         return n * factorial(n-1)
