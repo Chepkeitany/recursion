@@ -1,5 +1,10 @@
 '''
 Sum the first n natural numbers
+Time Complexity : O(n) - we make n recursive calls until we reach the base case
+                         where n is the input natural number
+Space Complexity: O(n) - the maximum recursive depth is n. Each recursive call
+                         adds a new call stack frame
+                         consuming additional space on the call stack
 '''
 def sum_numbers(n):
     if n == 0:
