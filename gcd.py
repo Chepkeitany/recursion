@@ -1,6 +1,15 @@
 '''
 Calculate the Greatest Common Divisor(GCD) of two positive numbers
 using the Euclidean algorithm
+
+Time Complexity : O(log(min(a, b))) where a and b are the input integers
+                  In each recursive call, at least one of the integers 
+                  is reduced by at least half of its value (since b becomes a % b, 
+                  and the modulo operation always yields a result smaller than b)
+                  This logarithmic behavior ensures that the number of recursive calls
+                  is proportional to the number of digits in the smaller of the two numbers.
+Space Complexity: O(log(min(a, b))). This is because each recursive call 
+                  adds a frame to the call stack until the base case is reached.
 '''
 
 def gcd(a, b):
