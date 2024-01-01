@@ -14,6 +14,10 @@ def is_prime(number):
 
 '''
 Check if a given number has any divisor from 2 to the square root of 2
+Time Complexity :  O(sqrt(n))  - where n is the given number. This function 
+                  checks the divisibility of the number from 2 up to its square root
+Space Complexity : O(sqrt(n))  - the maximum depth of the recursion is determined by
+                                 the square root of the number
 '''
 def check_divisors(number, divisor, square_root_value):
     if divisor > square_root_value:
