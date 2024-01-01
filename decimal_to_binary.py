@@ -12,8 +12,9 @@ Space Complexity: O(log n). This is because each recursive call adds a frame
 def decimal_to_binary(number):
     if number == 0:
         return ""
-    return decimal_to_binary(number // 2) + str(decimal % 2)
+    return decimal_to_binary(number // 2) + str(number % 2)
 
 assert decimal_to_binary(10) == "1010",   "Failed on decimal_to_binary(10)"
 assert decimal_to_binary(3) ==  "11",     "Failed on decimal_to_binary(3)"
 assert decimal_to_binary(1) ==  "1",      "Failed on decimal_to_binary(1)"
+print("All tests passed")
