@@ -16,3 +16,10 @@ def binary_search_helper(nums, low, high, target):
         return binary_search_helper(nums, low, mid - 1, target)
     else:
         return binary_search_helper(nums, mid + 1, high, target)
+
+assert binary_search([2, 4, 6, 8, 10], 5) == False,   "Failed on binary_search([2, 4, 6, 8, 10], 5)"
+assert binary_search([2, 4, 6, 8, 10], 4) == True,    "Failed on binary_search([2, 4, 6, 8, 10], 4)"
+assert binary_search([2, 3, 5, 7], 3)     == True,    "Failed on binary_search([2, 3, 5, 7], 3)"
+assert binary_search([2, 3, 5, 7], 9)     == False,   "Failed on binary_search([2, 3, 5, 7], 9)"
+
+print("All tests passed!")
