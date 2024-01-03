@@ -3,6 +3,10 @@ Generate the fibonacci sequence
 Fibonacci sequence is characterized by the fact that every number after 
 the first two is the sum of the two preceding ones. It typically starts with 0 and 1. 
 The sequence goes like this: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 and so forth
+
+Time Complexity: O(2^n) generates two more calls, leading to an exponential growth
+                        in the number of calls as n increases.
+Space Complexity: O(n) this is because the maximum depth of the recursion is n
 '''
 
 def fibonacci(n):
