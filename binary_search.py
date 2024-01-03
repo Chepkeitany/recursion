@@ -4,7 +4,14 @@ Determine if a key is present in a sorted array or not
 
 def binary_search(nums, target):
     return binary_search_helper(nums, 0, len(nums) -1, target)
-  
+
+'''
+Binary search helper to find a key in a sorted array
+Time Complexity :  O(log(n))  - where n is the size of input array.
+                                The search space is halved at each recursive step.
+Space Complexity :  O(log(n)) - There are log(n) recursive calls as the search
+                                space is halved at each recursive step.                             
+'''
 def binary_search_helper(nums, low, high, target):
     if low > high:
         return False
