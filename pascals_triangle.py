@@ -28,3 +28,19 @@ def pascal_triangle(num_rows):
     
     return triangle
 
+assert pascal_triangle(1) == [
+                                [1]
+                             ],              "Failed on pascal_triangle(1)"
+assert pascal_triangle(3) == [
+                                [1], 
+                               [1, 1], 
+                              [1, 2, 1]
+                             ],              "Failed on pascal_triangle(3)"
+assert pascal_triangle(4) == [
+                                [1], 
+                               [1, 1], 
+                              [1, 2, 1], 
+                             [1, 3, 3, 1]
+                             ],             "Failed on pascal_triangle(5)"
+
+print("All tests passed!")
