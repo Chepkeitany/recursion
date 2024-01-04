@@ -37,6 +37,15 @@ def print_bst_inorder(node):
     print(node.value, end=" ")
     print_bst_inorder(node.right)
 
+'''
+Traverse BST inorder and return the node values in the order they were visited
+Time Complexity: O(n)  - where n is the number of nodes that we will visit in the tree
+Space Complexity: O(h) - where h is the height of the tree. We will make 
+                         h recursive calls as we're traversing the tree in order
+                         in a balanced tree, this will be logarithmic but 
+                         in a tree that is skewed to one side and looks like a
+                         linked list, this will lead to n recursive calls
+'''
 def inorder_traversal(node, inorder_list):
     if not node:
         return
