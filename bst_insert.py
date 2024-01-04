@@ -44,8 +44,6 @@ def inorder_traversal(node, inorder_list):
     inorder_list.append(node.value)
     inorder_traversal(node.right, inorder_list)
 
-    return inorder_list
-
 # Initialize BST
 root = TreeNode(6)
 root.left = TreeNode(3)
@@ -56,12 +54,14 @@ root.right.right = TreeNode(9)
 
 # Insert 4
 root = insert_bst(root, 4)
-inorder_list = inorder_traversal(root, [])
+inorder_list = []
+inorder_traversal(root, inorder_list)
 assert inorder_list == [1, 3, 4, 5, 6, 8, 9], "Failed to correctly insert 4 into the bst"
 
 # Insert 7
 root = insert_bst(root, 7)
-inorder_list = inorder_traversal(root, [])
+inorder_list = []
+inorder_traversal(root, inorder_list)
 assert inorder_list == [1, 3, 4, 5, 6, 7, 8, 9], "Failed to correctly insert 7 into the bst"
 
 print("All tests passed!")
