@@ -1,7 +1,17 @@
 '''
 Given an array, return the array sorted in ascending order
+Time Complexity: O(n log n) - where n is the size of the input array
+                              in each level of recursion, the list is divided
+                              into half leading to log(n) recursive calls
+                              The merge step takes O(n) time because it is
+                              merging two n/2 arrays in each recursive call
+                              The total time complexity is n * log (n)
+Space Complexity: O(n)      - The merge step requires an extra space to store
+                              merged elements from the two sorted arrays
+                              This space is proportional to the size of input n
+                              Also, the recursive call stack takes space which
+                              this is log(n), proportional to the recursive depth
 '''
-
 def merge_sort(arr):
     # empty array or array of size 1 is sorted
     if len(arr) <= 1:
