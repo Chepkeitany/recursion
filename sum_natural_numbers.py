@@ -6,11 +6,14 @@ Space Complexity: O(n) - the maximum recursive depth is n. Each recursive call
                          adds a new call stack frame
                          consuming additional space on the call stack
 '''
+
+
 def sum_numbers(n):
+    """ Sum the first n natural numbers """
     if n == 0:
         return 0
-    else:
-        return n + sum_numbers(n - 1)
+    return n + sum_numbers(n - 1)
+
 
 print(sum_numbers(5))
 print(sum_numbers(3))

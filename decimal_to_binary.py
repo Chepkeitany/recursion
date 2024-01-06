@@ -10,6 +10,7 @@ Space Complexity: O(log n). This is because each recursive call adds a frame
 '''
 
 def decimal_to_binary(number):
+    """ Convert a decimal number to its binary representation """
     if number == 0:
         return ""
     return decimal_to_binary(number // 2) + str(number % 2)

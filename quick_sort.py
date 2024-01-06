@@ -15,6 +15,7 @@ Space Complexity: Average:    O(log n)
                   depth of recursive call stack can grow up to n.
 '''
 def quick_sort(arr):
+    """ Given an array, return the array sorted in ascending order """
     if len(arr) <= 1:
         return arr
 
