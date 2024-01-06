@@ -1,5 +1,18 @@
 '''
 Given an array, return the array sorted in ascending order
+Time Complexity: Average O(n log n)
+                 Worst case: O(n ^ 2) where n is the size of the array
+                 Average case is when each recursive call divides the array
+                 into roughly two equal halves leading to log n recursive calls.
+                 In each call, we do O(n) work in the partitioning process
+                 Worst case is when the pivot chosen happens to be either the
+                 largest or smallest element leading to unbalanced partitions
+                 and we end up with n recursive calls
+Space Complexity: Average:    O(log n)
+                  Worst case: O(n)
+                  Average - good pivot is chosen leading log n recursive calls
+                  Worst - poor pivot(largest or smallest element) chosen, the 
+                  depth of recursive call stack can grow up to n.
 '''
 def quick_sort(arr):
     if len(arr) <= 1:
@@ -7,7 +20,7 @@ def quick_sort(arr):
 
     # Choosing pivot: we'll use the middle element
     # Many ways to choose pivot: first or last element, middle element
-    # random element, using median element
+    # random element, using median of three e.t.c
     pivot = len(arr) // 2
     pivot_value = arr[pivot]
 
