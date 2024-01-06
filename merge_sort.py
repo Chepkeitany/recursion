@@ -12,13 +12,16 @@ Space Complexity: O(n)      - The merge step requires an extra space to store
                               Also, the recursive call stack takes space which
                               this is log(n), proportional to the recursive depth
 '''
+
+
 def merge_sort(arr):
+    """ Sort an array using merge sort algorithm """
     # empty array or array of size 1 is sorted
     if len(arr) <= 1:
         return arr
     mid = len(arr) // 2
-    left = arr[:mid] # left half of the array - from 0 to mid
-    right = arr[mid:] # right half of the array - from mid to len(arr)
+    left = arr[:mid]  # left half of the array - from 0 to mid
+    right = arr[mid:]  # right half of the array - from mid to len(arr)
 
     # recursively sort both halves
     left = merge_sort(left)
@@ -27,10 +30,9 @@ def merge_sort(arr):
     # merge the two sorted halves
     return merge(left, right)
 
-'''
-Combine the two sorted arrays into one sorted array
-'''
+
 def merge(left, right):
+    """ Combine the two sorted arrays into one sorted array """
     merged = []
     # pointers to traverse both left and right arrays
     i = 0
@@ -54,9 +56,13 @@ def merge(left, right):
 
     return merged
 
-assert merge_sort([8, 6, 7, 5, 4]) == [4, 5, 6, 7, 8], "Failed on merge_sort([8, 6, 7, 5, 4])"
-assert merge_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5], "Failed on merge_sort([5, 4, 3, 2, 1])"
+
+assert merge_sort([8, 6, 7, 5, 4]) == [4, 5, 6, 7,
+                                       8], "Failed on merge_sort([8, 6, 7, 5, 4])"
+assert merge_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4,
+                                       5], "Failed on merge_sort([5, 4, 3, 2, 1])"
 assert merge_sort([5]) == [5], "Failed on merge_sort([5])"
-assert merge_sort([2, 1, 0, -2, -1]) == [-2, -1, 0, 1, 2], "Failed on merge_sort([2, 1, 0, -2, -1])"
+assert merge_sort([2, 1, 0, -2, -1]) == [-2, -1, 0, 1,
+                                         2], "Failed on merge_sort([2, 1, 0, -2, -1])"
 
 print("All tests passed!")
