@@ -1,5 +1,20 @@
 '''
 Implement Depth First Search graph algorithm
+
+Build an adjacency_list graph using the build_graph function
+
+Run the dfs algorithm on the graph starting with the start node.
+
+Time Complexity: O(V + E) - where V and E is the number of vertices and edges
+                            of the graph respectively. In dfs, every vertex is
+                            explored once contributing to O(V). For each vertex,
+                            the algorithm explores all its adjacent edges either
+                            twice(for undirected graph) or once(for directed graph)
+                            contributing to O(E). Time complexity = O(V + E)
+Space Complexity: O(V) - where V is the number of vertices in the graph
+                         In the worst case, a linked list time of a graph,
+                         we will end up with all the vertices in the call stack
+                         leading to O(V) space due to recursion depth
 '''
 
 
