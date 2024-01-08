@@ -1,6 +1,12 @@
 # pylint: disable=R0903
 '''
 Remove target nodes from a linked list
+Time Complexity: O(n) - where n is the number of nodes in the linked list,
+                        we need to visit each node once to determine if we
+                        should remove it as it matches the target value or not
+Space Complexity: O(n) - n is the number of recursive calls in the stack until
+                         we reach the base case. Each recursive call takes up
+                         additional space in the call stack.
 '''
 
 class Node:
