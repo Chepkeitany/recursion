@@ -9,12 +9,17 @@ Time Complexity: O(2^n) generates two more calls, leading to an exponential grow
 Space Complexity: O(n) this is because the maximum depth of the recursion is n
 '''
 
+memoization_table = {}
 
 def fibonacci(n):
     """ Compute the nth fibonacci number """
     if n <= 1:
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+
+    if n in memoization_table:
+        return memoization_table[n]
+    memoization_table[n] = fibonacci(n - 1) + fibonacci(n - 2)
+    return memoization_table[n]
 
 
 fibonacci_sequence = [fibonacci(i) for i in range(10)]
