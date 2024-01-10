@@ -32,11 +32,11 @@ def is_perfect_square_helper(num, low, high):
         return is_perfect_square_helper(num, low, mid - 1)
     return is_perfect_square_helper(num, mid + 1, high)
 
+if __name__ == '__main__':
+    assert is_perfect_square(10) is False, "Failed on is_perfect_square(10)"
+    assert is_perfect_square(16), "Failed on is_perfect_square(16)"
+    assert is_perfect_square(1), "Failed on is_perfect_square(1)"
+    assert is_perfect_square(2) is False, "Failed on is_perfect_square(2)"
+    assert is_perfect_square(4), "Failed on is_perfect_square(4)"
 
-assert is_perfect_square(10) is False, "Failed on is_perfect_square(10)"
-assert is_perfect_square(16), "Failed on is_perfect_square(16)"
-assert is_perfect_square(1), "Failed on is_perfect_square(1)"
-assert is_perfect_square(2) is False, "Failed on is_perfect_square(2)"
-assert is_perfect_square(4), "Failed on is_perfect_square(4)"
-
-print("All tests passed!")
+    print("All tests passed!")

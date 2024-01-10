@@ -56,13 +56,13 @@ def merge(left, right):
 
     return merged
 
+if __name__ == '__main__':
+    assert merge_sort([8, 6, 7, 5, 4]) == [4, 5, 6, 7,
+                                        8], "Failed on merge_sort([8, 6, 7, 5, 4])"
+    assert merge_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4,
+                                        5], "Failed on merge_sort([5, 4, 3, 2, 1])"
+    assert merge_sort([5]) == [5], "Failed on merge_sort([5])"
+    assert merge_sort([2, 1, 0, -2, -1]) == [-2, -1, 0, 1,
+                                            2], "Failed on merge_sort([2, 1, 0, -2, -1])"
 
-assert merge_sort([8, 6, 7, 5, 4]) == [4, 5, 6, 7,
-                                       8], "Failed on merge_sort([8, 6, 7, 5, 4])"
-assert merge_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4,
-                                       5], "Failed on merge_sort([5, 4, 3, 2, 1])"
-assert merge_sort([5]) == [5], "Failed on merge_sort([5])"
-assert merge_sort([2, 1, 0, -2, -1]) == [-2, -1, 0, 1,
-                                         2], "Failed on merge_sort([2, 1, 0, -2, -1])"
-
-print("All tests passed!")
+    print("All tests passed!")

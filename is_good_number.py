@@ -27,8 +27,9 @@ def check_is_good_number(s, index):
         return False
     return check_is_good_number(s, index + 1)
 
-assert is_good_number('02468') is False, "Failed on is_good_number('02468')"
-assert is_good_number('23478'),          "Failed on is_good_number('23478')"
-assert is_good_number('224365'),         "Failed on is_good_number('224365')"
+if __name__ == '__main__':
+    assert is_good_number('02468') is False, "Failed on is_good_number('02468')"
+    assert is_good_number('23478'),          "Failed on is_good_number('23478')"
+    assert is_good_number('224365'),         "Failed on is_good_number('224365')"
 
-print("All tests passed!!!")
+    print("All tests passed!")

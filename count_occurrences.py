@@ -27,12 +27,12 @@ def count_occurrences_helper(arr, key, index=0):
 
     return total_count
 
+if __name__ == '__main__':
+    assert count_occurrences(
+        [2, 4, 6, 8, 4], 4) == 2, "Failed on count_occurrences([2, 4, 6, 8, 4], 4)"
+    assert count_occurrences(
+        [2, 4, 6, 8, 4], 2) == 1, "Failed on count_occurrences([2, 4, 6, 8, 4], 2)"
+    assert count_occurrences(
+        [2, 2, 2, 2, 4], 2) == 4, "Failed on count_occurrences([2, 2, 2, 2, 4], 2)"
 
-assert count_occurrences(
-    [2, 4, 6, 8, 4], 4) == 2, "Failed on count_occurrences([2, 4, 6, 8, 4], 4)"
-assert count_occurrences(
-    [2, 4, 6, 8, 4], 2) == 1, "Failed on count_occurrences([2, 4, 6, 8, 4], 2)"
-assert count_occurrences(
-    [2, 2, 2, 2, 4], 2) == 4, "Failed on count_occurrences([2, 2, 2, 2, 4], 2)"
-
-print("All tests passed!")
+    print("All tests passed!")

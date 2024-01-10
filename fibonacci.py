@@ -37,25 +37,25 @@ def fibonacci_memoized(n):
     memoization_table[n] = fibonacci_memoized(n - 1) + fibonacci_memoized(n - 2)
     return memoization_table[n]
 
+if __name__ == '__main__':
+    # Brute force recursive fibonacci sequence generation
+    start_time = time.time()
+    fibonacci_sequence = [fibonacci(i) for i in range(20)]
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Generating first 20 fibonacci numbers using brute force took: {elapsed_time} seconds")
 
-# Brute force recursive fibonacci sequence generation
-start_time = time.time()
-fibonacci_sequence = [fibonacci(i) for i in range(20)]
-end_time = time.time()
-elapsed_time = end_time - start_time
-print(f"Generating first 20 fibonacci numbers using brute force took: {elapsed_time} seconds")
+    assert fibonacci_sequence[0] == 0, "Failed on fibonacci_sequence[0]"
+    assert fibonacci_sequence[1] == 1, "Failed on fibonacci_sequence[1]"
+    assert fibonacci_sequence[3] == 2, "Failed on fibonacci_sequence[3]"
 
-assert fibonacci_sequence[0] == 0, "Failed on fibonacci_sequence[0]"
-assert fibonacci_sequence[1] == 1, "Failed on fibonacci_sequence[1]"
-assert fibonacci_sequence[3] == 2, "Failed on fibonacci_sequence[3]"
-
-# Recursive fibonacci sequence generation using memoization
-start_time = time.time()
-fibonacci_sequence_memoized = [fibonacci_memoized(i) for i in range(20)]
-end_time = time.time()
-elapsed_time = end_time - start_time
-print(f"Generating first 20 fibonacci numbers with memoization took: {elapsed_time} seconds")
-assert fibonacci_sequence[0] == 0, "Failed on fibonacci_sequence[0]"
-assert fibonacci_sequence[1] == 1, "Failed on fibonacci_sequence[1]"
-assert fibonacci_sequence[3] == 2, "Failed on fibonacci_sequence[3]"
-print("All tests passed!")
+    # Recursive fibonacci sequence generation using memoization
+    start_time = time.time()
+    fibonacci_sequence_memoized = [fibonacci_memoized(i) for i in range(20)]
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Generating first 20 fibonacci numbers with memoization took: {elapsed_time} seconds")
+    assert fibonacci_sequence[0] == 0, "Failed on fibonacci_sequence[0]"
+    assert fibonacci_sequence[1] == 1, "Failed on fibonacci_sequence[1]"
+    assert fibonacci_sequence[3] == 2, "Failed on fibonacci_sequence[3]"
+    print("All tests passed!")

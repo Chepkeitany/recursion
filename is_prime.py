@@ -35,4 +35,4 @@ if __name__ == '__main__':
     assert is_prime(1) is False,  "Failed on is_prime(1)"
     assert is_prime(2),           "Failed on is_prime(1)"
 
-    print("All tests passed")
+    print("All tests passed!")
