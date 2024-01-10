@@ -31,8 +31,8 @@ def check_divisors(number, divisor, square_root_value):
 
 if __name__ == '__main__':
     assert is_prime(10) is False, "Failed on is_prime(10)"
-    assert is_prime(3), "Failed on is_prime(3)"
-    assert is_prime(1) is False, "Failed on is_prime(1)"
-    assert is_prime(2), "Failed on is_prime(1)"
+    assert is_prime(3),           "Failed on is_prime(3)"
+    assert is_prime(1) is False,  "Failed on is_prime(1)"
+    assert is_prime(2),           "Failed on is_prime(1)"
 
     print("All tests passed")
