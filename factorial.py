@@ -17,9 +17,9 @@ def factorial(n):
         return 1
     return n * factorial(n - 1)
 
+if __name__ == '__main__':
+    assert factorial(5) == 120, "Failed on factorial(5)"
+    assert factorial(1) == 1, "Failed on factorial(1)"
+    assert factorial(0) == 1, "Failed on factorial(0)"
 
-assert factorial(5) == 120, "Failed on factorial(5)"
-assert factorial(1) == 1, "Failed on factorial(1)"
-assert factorial(0) == 1, "Failed on factorial(0)"
-
-print("All tests passed!")
+    print("All tests passed!")

@@ -11,9 +11,11 @@ Time Complexity: Average O(n log n)
 Space Complexity: Average:    O(log n)
                   Worst case: O(n)
                   Average - good pivot is chosen leading log n recursive calls
-                  Worst - poor pivot(largest or smallest element) chosen, the 
+                  Worst - poor pivot(largest or smallest element) chosen, the
                   depth of recursive call stack can grow up to n.
 '''
+
+
 def quick_sort(arr):
     """ Given an array, return the array sorted in ascending order """
     if len(arr) <= 1:
@@ -31,9 +33,14 @@ def quick_sort(arr):
 
     return quick_sort(smaller) + equal + quick_sort(larger)
 
-assert quick_sort([8, 6, 7, 5, 4]) == [4, 5, 6, 7, 8], "Failed on quick_sort([8, 6, 7, 5, 4])"
-assert quick_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5], "Failed on quick_sort([5, 4, 3, 2, 1])"
-assert quick_sort([5]) == [5], "Failed on quick_sort([5])"
-assert quick_sort([2, 1, 0, -2, -1]) == [-2, -1, 0, 1, 2], "Failed on quick_sort([2, 1, 0, -2, -1])"
 
-print("All tests passed!")
+if __name__ == '__main__':
+    assert quick_sort([8, 6, 7, 5, 4]) == [4, 5, 6, 7,
+                                           8], "Failed on quick_sort([8, 6, 7, 5, 4])"
+    assert quick_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4,
+                                           5], "Failed on quick_sort([5, 4, 3, 2, 1])"
+    assert quick_sort([5]) == [5], "Failed on quick_sort([5])"
+    assert quick_sort([2, 1, 0, -2, -1]) == [-2, -1, 0, 1,
+                                             2], "Failed on quick_sort([2, 1, 0, -2, -1])"
+
+    print("All tests passed!")

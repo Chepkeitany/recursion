@@ -14,8 +14,10 @@ def sum_numbers(n):
         return 0
     return n + sum_numbers(n - 1)
 
+if __name__ == '__main__':
+    assert sum_numbers(5) == 15, "Failed on sum_numbers(5)"
+    assert sum_numbers(3) == 6,  "Failed on sum_numbers(3)"
+    assert sum_numbers(1) == 1,  "Failed on sum_numbers(1)"
+    assert sum_numbers(0) == 0,  "Failed on sum_numbers(0)"
 
-print(sum_numbers(5))
-print(sum_numbers(3))
-print(sum_numbers(1))
-print(sum_numbers(0))
+    print("All tests passed!")

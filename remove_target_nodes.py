@@ -51,27 +51,28 @@ def get_list_values(node):
 
     return result
 
+if __name__ == '__main__':
+    # Initiliaze linked list 1
+    head1 = Node(1)
+    head1.next = Node(5)
+    head1.next.next = Node(2)
+    head1.next.next.next = Node(4)
+    head1.next.next.next.next = Node(3)
 
-# Initiliaze linked list 1
-head1 = Node(1)
-head1.next = Node(5)
-head1.next.next = Node(2)
-head1.next.next.next = Node(4)
-head1.next.next.next.next = Node(3)
+    print_list(head1)
+    new_list_head = remove_target_nodes(head1, 2)
+    assert get_list_values(new_list_head) == [
+        1, 5, 4, 3], "Failed to remove node with value 2"
 
-print_list(head1)
-new_list_head = remove_target_nodes(head1, 2)
-assert get_list_values(new_list_head) == [
-    1, 5, 4, 3], "Failed to remove node with value 2"
+    # Initialize linked list 2
+    head2 = Node(5)
+    head2.next = Node(4)
+    head2.next.next = Node(2)
+    head2.next.next.next = Node(3)
+    head2.next.next.next.next = Node(1)
 
-head2 = Node(5)
-head2.next = Node(4)
-head2.next.next = Node(2)
-head2.next.next.next = Node(3)
-head2.next.next.next.next = Node(1)
+    print_list(head2)
+    assert get_list_values(remove_target_nodes(head2, 3)) == [
+        5, 4, 2, 1], "Failed to remove node with value 3"
 
-print_list(head2)
-assert get_list_values(remove_target_nodes(head2, 3)) == [
-    5, 4, 2, 1], "Failed to remove node with value 3"
-
-print("All tests passed!")
+    print("All tests passed!")

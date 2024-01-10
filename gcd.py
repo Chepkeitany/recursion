@@ -26,15 +26,16 @@ def gcd(a, b):
     return gcd_recursive(a, b)
 
 
-assert gcd(12, 18) == 6, "Failed on gcd(12,18)"
-assert gcd(15, 25) == 5, "Failed on gcd(15,25)"
-assert gcd(1, 5) == 1, "Failed on gcd(1, 5)"
+if __name__ == '__main__':
+    assert gcd(12, 18) == 6, "Failed on gcd(12,18)"
+    assert gcd(15, 25) == 5, "Failed on gcd(15,25)"
+    assert gcd(1, 5) == 1, "Failed on gcd(1, 5)"
 
-# Test with negative input
-try:
-    gcd(-1, 5)
-    assert False, "ValueError not raised for gcd(-1,5)"
-except ValueError:
-    pass  # The input has been handled correctly
+    # Test with negative input
+    try:
+        gcd(-1, 5)
+        assert False, "ValueError not raised for gcd(-1,5)"
+    except ValueError:
+        pass  # The input has been handled correctly
 
-print("All tests passed!")
+    print("All tests passed!")

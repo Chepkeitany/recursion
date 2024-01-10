@@ -26,14 +26,14 @@ def binary_search_helper(nums, low, high, target):
         return binary_search_helper(nums, low, mid - 1, target)
     return binary_search_helper(nums, mid + 1, high, target)
 
+if __name__ == '__main__':
+    assert binary_search(
+        [2, 4, 6, 8, 10], 5) is False, "Failed on binary_search([2, 4, 6, 8, 10], 5)"
+    assert binary_search(
+        [2, 4, 6, 8, 10], 4), "Failed on binary_search([2, 4, 6, 8, 10], 4)"
+    assert binary_search(
+        [2, 3, 5, 7], 3), "Failed on binary_search([2, 3, 5, 7], 3)"
+    assert binary_search(
+        [2, 3, 5, 7], 9) is False, "Failed on binary_search([2, 3, 5, 7], 9)"
 
-assert binary_search(
-    [2, 4, 6, 8, 10], 5) is False, "Failed on binary_search([2, 4, 6, 8, 10], 5)"
-assert binary_search(
-    [2, 4, 6, 8, 10], 4), "Failed on binary_search([2, 4, 6, 8, 10], 4)"
-assert binary_search(
-    [2, 3, 5, 7], 3), "Failed on binary_search([2, 3, 5, 7], 3)"
-assert binary_search(
-    [2, 3, 5, 7], 9) is False, "Failed on binary_search([2, 3, 5, 7], 9)"
-
-print("All tests passed!")
+    print("All tests passed!")
