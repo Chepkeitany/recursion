@@ -1,5 +1,9 @@
 '''
 Given an integer x and power n, raise x to the power of n
+
+Time complexity:  O(log n) - where n is the power, because we
+                             divide the problem size in half with each recursive call.
+Space complexity: O(log n) - because the maximum depth of the recursion is log n.
 '''
 
 def power(x, n):
